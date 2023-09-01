@@ -35,6 +35,15 @@ functions:
           path: /tasks
           method: get
   
+  getSaludo:
+    handler: src/getSaludo.enviarSaludo
+    events:
+      - httpApi:
+          path: /saludo
+          method: get
+
+          
+
 
 resources:
   Resources:
