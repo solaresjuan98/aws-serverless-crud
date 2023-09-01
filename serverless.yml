@@ -35,6 +35,28 @@ functions:
           path: /tasks
           method: get
   
+  getTask:
+    handler: src/getTask.getTask
+    events:
+      - httpApi:
+          path: /tasks/{id}
+          method: get
+
+  updateTask:
+    handler: src/updateTask.updateTask
+    events:
+      - httpApi:
+          path: /tasks/{id}
+          method: put
+
+  deleteTask:
+    handler: src/deleteTask.deleteTask
+    events:
+      - httpApi:
+          path: /tasks/{id}
+          method: delete
+
+
   getSaludo:
     handler: src/getSaludo.enviarSaludo
     events:
@@ -42,7 +64,7 @@ functions:
           path: /saludo
           method: get
 
-          
+  
 
 
 resources:
